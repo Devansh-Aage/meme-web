@@ -1,4 +1,3 @@
-
 .generate-meme-btn{
     width: 100%;
     font-size: larger;
@@ -11,6 +10,7 @@
     padding-top: 20px;
     padding-bottom: 30px;
     cursor: grab;
+    
 }
 .generate-meme-btn:hover{
     background-color: aqua;
@@ -31,3 +31,25 @@ img{
 .container{
     width:100%;
 }
+#server{
+  width: 10%;
+} 
+  
+button{
+    border-radius: 5px;
+  }
+  
+  .meme-title{
+    text-align: center;
+    
+  }
+  @media (min-width:460px) and (max-width:850px){
+    #server{
+       width: 20%;
+    }
+  }
+  @media (min-width:0px) and (max-width:460px){
+    #server{
+       width: 40%;
+    }
+  }
