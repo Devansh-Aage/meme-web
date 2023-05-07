@@ -12,6 +12,7 @@ $("#server").change(function(){
                 (response) => response.json()).then(data => {
                     updateDetails(data.url, data.title, data.author);
                 });
+                console.log("IndianDankMemes updated");
         };
         generateMemeBtn.addEventListener("click", generateMeme);
     }
@@ -22,29 +23,23 @@ $("#server").change(function(){
                 (response) => response.json()).then(data => {
                     updateDetails(data.url, data.title, data.author);
                 });
-        };
-        generateMemeBtn.addEventListener("click", generateMeme);
-    }
-
-    else if(server=="saiman"){
-        const generateMeme = () => {
-            fetch("https://meme-api.com/gimme/SaimanSays").then(
-                (response) => response.json()).then(data => {
-                    updateDetails(data.url, data.title, data.author);
-                });
+                console.log("sunraybee updated");
         };
         generateMemeBtn.addEventListener("click", generateMeme);
     }
 
     else{
         const generateMeme = () => {
-            fetch("https://meme-api.com/gimme/IndianDankMemes").then(
+            fetch("https://meme-api.com/gimme/SaimanSays").then(
                 (response) => response.json()).then(data => {
                     updateDetails(data.url, data.title, data.author);
                 });
+                console.log("saimanSays updated");
         };
         generateMemeBtn.addEventListener("click", generateMeme);
-    }
+    }    
+
+   
 
     const updateDetails = (url, title, author) => {
         memeImage.setAttribute("src", url);
