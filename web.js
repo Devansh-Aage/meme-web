@@ -28,6 +28,17 @@ $("#server").change(function(){
         generateMemeBtn.addEventListener("click", generateMeme);
     }
 
+    else if(server=="zaid"){
+        const generateMeme = () => {
+            fetch("https://meme-api.com/gimme/ZaidZIZ").then(
+                (response) => response.json()).then(data => {
+                    updateDetails(data.url, data.title, data.author);
+                });
+                console.log("Zaid updated");
+        };
+        generateMemeBtn.addEventListener("click", generateMeme);
+    }
+
     else{
         const generateMeme = () => {
             fetch("https://meme-api.com/gimme/SaimanSays").then(
